@@ -1,0 +1,75 @@
+@import "./mixins";
+@import "./colcors";
+
+.hero {
+  margin-bottom: 145px;
+  background: $red;
+
+  // .hero__container
+
+  &__container {
+    position: relative;
+  }
+
+  &__image {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media (max-width: 1300px) {
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+    }
+    @media (max-width: 767px) {
+      position: relative;
+      filter: none;
+      -webkit-filter: none;
+      width: 100%;
+    }
+  }
+  // .hero__content
+
+  &__content {
+    z-index: 2;
+    position: relative;
+    padding: 79px 0 99px 0;
+  }
+
+  // .hero__prevtitle
+
+  &__prevtitle {
+    @include text(16px, 26px, white);
+    @media (max-width: 767px) {
+      @include text(14px, 19px, white);
+      text-align: center;
+    }
+    @media (max-width: 1300px) {
+      text-shadow: 1px 1px 10px #475658;
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    @include text(45px, 53px, white, 700);
+    max-width: 670px;
+    margin-bottom: 31px;
+    text-shadow: 1px 1px 10px #475658;
+    @media (max-width: 767px) {
+      @include text(22px, 25px, white);
+      text-align: center;
+    }
+    span {
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      display: inline-block;
+      padding: 2px 20px;
+    }
+  }
+
+  // .hero__button
+
+  &__button {
+    @include button(#fff, #475658);
+  }
+}

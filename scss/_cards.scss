@@ -1,0 +1,52 @@
+@import "./mixins";
+.cards {
+  margin-bottom: 50px;
+  // .cards__container
+
+  &__container {
+    display: flex;
+    gap: 61px;
+    @media (max-width: 1200px) {
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  // .cards__card
+
+  &__card {
+    position: relative;
+    padding: 28px 48px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px 50px 50px 50px;
+    @media (max-width: 992px) {
+      padding: 14px 24px;
+    }
+  }
+  &__index {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include text(60px, 20px, 700, #03073c);
+  }
+  // .cards__title
+
+  &__title {
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 11px 31px;
+    margin-bottom: 7px;
+    @include text(14px, 21px);
+  }
+
+  // .cards__image
+
+  &__image {
+    height: 285/380 * 100%;
+    height: 150/380 * 100%;
+    img {
+      width: 100%;
+    }
+  }
+}

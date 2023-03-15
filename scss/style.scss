@@ -1,0 +1,21 @@
+@import "./_null-style.scss";
+@import "./_colcors.scss";
+@import "./footer";
+@import "./mixins";
+@import "./header";
+@import "./cards";
+@import "./hero";
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1470px;
+}
+.main {
+  flex: 1 1 auto;
+}
